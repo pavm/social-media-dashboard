@@ -1,0 +1,142 @@
+@use "../index.scss" as *;
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-card);
+  padding: 1.8rem;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: var(--card-bg-hover);
+  }
+}
+
+.card--hl {
+  @extend .card;
+  padding-top: 2.2rem;
+  background-image: var(--text);
+  background-repeat: no-repeat;
+  background-size: 100% var(--border-radius-card);
+
+  &[data-social="facebook-followers"] {
+    background-image: linear-gradient(var(--facebook), var(--facebook));
+  }
+
+  &[data-social="twitter-followers"] {
+    background-image: linear-gradient(var(--twitter), var(--twitter));
+  }
+
+  &[data-social="instagram-followers"] {
+    background-image: var(--instagram);
+  }
+
+  &[data-social="youtube-followers"] {
+    background-image: linear-gradient(var(--youtube), var(--youtube));
+  }
+}
+
+/* ========================== § FOLLOWERS CARD === */
+.followers__card {
+  text-align: center;
+}
+.followers__social-container {
+  display: flex;
+  justify-content: center;
+}
+
+.followers__social__img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.followers__social__username {
+  margin-left: 0.7rem;
+  font-size: var(--small-font-size);
+  font-weight: bold;
+  color: var(--text);
+}
+
+.followers__followers,
+.followers__followers-sign,
+.followers__followers-difference {
+  display: block;
+}
+
+.followers__followers {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1em;
+  margin-top: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.followers__followers-sign {
+  text-transform: uppercase;
+  font-size: var(--small-font-size);
+  letter-spacing: 0.4em;
+  color: var(--text);
+  margin-bottom: 1.2rem;
+}
+
+.followers__difference,
+.overview__card__difference {
+  font-weight: bold;
+  font-size: var(--small-font-size);
+
+  &.more {
+    color: var(--lime-green);
+  }
+  &:before {
+    @extend .bx;
+    @extend .bx-caret-up;
+  }
+
+  &.less {
+    color: var(--bright-red);
+  }
+  &:before {
+    @extend .bx;
+    @extend .bx-caret-down;
+  }
+}
+
+/* ========================== § OVERVIEW CARD === */
+.overview__card {
+  @extend .card;
+}
+
+.overview__card__header,
+.overview__card__number-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.overview__card__header {
+  margin-bottom: 2rem;
+}
+
+.overview__card__about {
+  font-weight: bold;
+  color: var(--text);
+}
+
+.overview__card__icon {
+  --icon-size: 1.5rem;
+  display: block;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.overview__card__number-container {
+  align-items: flex-end;
+}
+
+.overview__card__number {
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+
+.overview__card__difference {
+  align-self: flex-end;
+  line-height: var(--small-font-size);
+}

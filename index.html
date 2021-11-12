@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+
+    <title>Social Media Dashboard</title>
+  </head>
+  <body>
+    <main class="container">
+      <!-- ========================== § HEADER === -->
+      <header class="header">
+        <!-- ========================== § TITLE === -->
+        <div class="header__title-container">
+          <h1 class="header__title">Social Media Dashboard</h1>
+          <p class="header__subtitle">Total Followers: 23,004</p>
+        </div>
+
+        <!-- ========================== § THEME SWITCH TOGGLE === -->
+        <div class="theme-toggle-container header__theme-container">
+          <div class="theme-toggle header__theme-toggle">
+            <input name="theme-toggle" id="theme-toggle--left" class="theme-toggle--left" type="radio" />
+            <label for="theme-toggle--left">Dark theme</label>
+            <input name="theme-toggle" id="theme-toggle--center" class="theme-toggle--center" type="radio" checked />
+            <label for="theme-toggle--center">Preferred theme</label>
+            <input name="theme-toggle" id="theme-toggle--right" class="theme-toggle--right" type="radio" />
+            <label for="theme-toggle--right">Light theme</label>
+            <div class="theme-toggle__thumb"></div>
+          </div>
+        </div>
+      </header>
+      <!-- end header -->
+
+      <!-- ========================== § FOLLOWERS === -->
+      <section class="followers-container">
+        <header class="followers__header">
+          <h2 class="followers__title">Followers</h2>
+        </header>
+
+        <!-- FOLLOWERS CARD 1 -->
+        <div data-social="facebook-followers" class="followers__card card--hl">
+          <div class="followers__social-container">
+            <img src="./images/icon-facebook.svg" alt="Facebook icon" class="followers__social__img" />
+            <p class="followers__social__username">@nathanf</p>
+          </div>
+
+          <span class="followers__followers">1987</span>
+          <span class="followers__followers-sign">Followers</span>
+
+          <span class="followers__difference more">12 Today</span>
+        </div>
+
+        <!-- FOLLOWERS CARD 2 -->
+        <div data-social="twitter-followers" class="followers__card card--hl">
+          <div class="followers__social-container">
+            <img src="./images/icon-twitter.svg" alt="twitter icon" class="followers__social__img" />
+            <p class="followers__social__username">@nathanf</p>
+          </div>
+
+          <span class="followers__followers">1044</span>
+          <span class="followers__followers-sign">Followers</span>
+
+          <span class="followers__difference more">99 Today</span>
+        </div>
+
+        <!-- FOLLOWERS CARD 3 -->
+        <div data-social="instagram-followers" class="followers__card card--hl">
+          <div class="followers__social-container">
+            <img src="./images/icon-instagram.svg" alt="Instagram icon" class="followers__social__img" />
+            <p class="followers__social__username">@realnathanf</p>
+          </div>
+
+          <span class="followers__followers">11k</span>
+          <span class="followers__followers-sign">Followers</span>
+
+          <span class="followers__difference more">1099 Today</span>
+        </div>
+
+        <!-- FOLLOWERS CARD 4 -->
+        <div data-social="youtube-followers" class="followers__card card--hl">
+          <div class="followers__social-container">
+            <img src="./images/icon-youtube.svg" alt="Youtube icon" class="followers__social__img" />
+            <p class="followers__social__username">Nathan F.</p>
+          </div>
+
+          <span class="followers__followers">8239</span>
+          <span class="followers__followers-sign">Followers</span>
+
+          <span class="followers__difference less">144 Today</span>
+        </div>
+      </section>
+
+      <!-- ========================== § OVERVIEW SECTION === -->
+      <section class="overview-container">
+        <header class="overview__header">
+          <h2 class="overview__title">Overview – Today</h2>
+        </header>
+
+        <!-- OVERVIEW CARD 1 -->
+        <div class="overview__card card">
+          <header class="overview__card__header">
+            <p class="overview__card__about">Page Views</p>
+            <img class="overview__card__icon" src="./images/icon-facebook.svg" alt="Facebook icon" />
+          </header>
+
+          <div class="overview__card__number-container">
+            <span class="overview__card__number">87</span>
+
+            <span class="overview__card__difference more">303%</span>
+          </div>
+        </div>
+
+        <!--  OVERVIEW CARD 2 -->
+        <div class="overview__card card">
+          <header class="overview__card__header">
+            <p class="overview__card__about">Likes</p>
+            <img class="overview__card__icon" src="./images/icon-facebook.svg" alt="Facebook icon" />
+          </header>
+
+          <div class="overview__card__number-container">
+            <span class="overview__card__number">52</span>
+
+            <span class="overview__card__difference more">2%</span>
+          </div>
+        </div>
+
+        <!-- OVERVIEW CARD 3 -->
+        <div class="overview__card card">
+          <header class="overview__card__header">
+            <p class="overview__card__about">Likes</p>
+            <img class="overview__card__icon" src="./images/icon-instagram.svg" alt="Instagram icon" />
+          </header>
+
+          <div class="overview__card__number-container">
+            <span class="overview__card__number">5462</span>
+
+            <span class="overview__card__difference more">2257%</span>
+          </div>
+        </div>
+
+        <!-- OVERVIEW CARD 4 -->
+        <div class="overview__card card">
+          <header class="overview__card__header">
+            <p class="overview__card__about">Profile Views</p>
+            <img class="overview__card__icon" src="./images/icon-instagram.svg" alt="Instagram icon" />
+          </header>
+
+          <div class="overview__card__number-container">
+            <span class="overview__card__number">52k</span>
+
+            <span class="overview__card__difference more">1375%</span>
+          </div>
+        </div>
+
+        <!-- OVERVIEW CARD 5 -->
+        <div class="overview__card card">
+          <header class="overview__card__header">
+            <p class="overview__card__about">Retweets</p>
+            <img class="overview__card__icon" src="./images/icon-twitter.svg" alt="Twitter icon" />
+          </header>
+
+          <div class="overview__card__number-container">
+            <span class="overview__card__number">117</span>
+
+            <span class="overview__card__difference more">303%</span>
+          </div>
+        </div>
+
+        <!-- OVERVIEW CARD 6 -->
+        <div class="overview__card card">
+          <header class="overview__card__header">
+            <p class="overview__card__about">Likes</p>
+            <img class="overview__card__icon" src="./images/icon-twitter.svg" alt="Twitter icon" />
+          </header>
+
+          <div class="overview__card__number-container">
+            <span class="overview__card__number">507</span>
+
+            <span class="overview__card__difference more">553%</span>
+          </div>
+        </div>
+
+        <!-- OVERVIEW CARD 7 -->
+        <div class="overview__card card">
+          <header class="overview__card__header">
+            <p class="overview__card__about">Liked</p>
+            <img class="overview__card__icon" src="./images/icon-youtube.svg" alt="Youtube icon" />
+          </header>
+
+          <div class="overview__card__number-container">
+            <span class="overview__card__number">107</span>
+
+            <span class="overview__card__difference more">19%</span>
+          </div>
+        </div>
+
+        <!-- OVERVIEW CARD 8 -->
+        <div class="overview__card card">
+          <header class="overview__card__header">
+            <p class="overview__card__about">Total Views</p>
+            <img class="overview__card__icon" src="./images/icon-youtube.svg" alt="Youtube icon" />
+          </header>
+
+          <div class="overview__card__number-container">
+            <span class="overview__card__number">1407</span>
+
+            <span class="overview__card__difference more">12%</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- end page container -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+@use "../index" as *;
+
+.container {
+  --padding-container: 1.7rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: calc(1110px + (var(--padding-container) * 2));
+  padding: var(--padding-container);
+}
+
+.header {
+  display: flex;
+  margin-bottom: 2.7rem;
+
+  @include mq($desktop-width, down) {
+    flex-wrap: wrap;
+  }
+
+  @include mq($desktop-width, up) {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.header__title-container {
+  @include mq($desktop-width, down) {
+    flex: 1 0 100%;
+    border-bottom: 1px solid var(--text);
+    padding-bottom: 1.4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.followers-container,
+.overview-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1.5rem 2rem;
+
+  @include mq($desktop-width, up) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include mq($tablet-width, $desktop-width) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.followers__header,
+.overview__header {
+  @include column-start-end(1, -1);
+}
+
+.followers__header {
+  @extend %hide-visually;
+}

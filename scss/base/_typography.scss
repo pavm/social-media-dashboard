@@ -1,0 +1,22 @@
+@use "../index.scss" as *;
+
+.header__title {
+  margin-top: 1rem;
+  margin-bottom: 0.1rem;
+  font-size: 1.7rem;
+
+  @include mq($desktop-width, up) {
+    font-size: 2rem;
+  }
+}
+
+.header__subtitle {
+  font-weight: bold;
+  color: var(--text);
+}
+
+.overview__title {
+  margin-top: 3.2rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.7rem;
+}

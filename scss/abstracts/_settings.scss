@@ -1,0 +1,81 @@
+@mixin theme-props($theme) {
+  @if $theme == dark {
+    --background: var(--very-dark-blue);
+    --top-bg-pattern: var(--very-dark-blue2);
+    --card-bg: var(--dark-desaturated-blue);
+    --card-bg-hover: var(--dark-desaturated-blue2);
+    --text: var(--desaturated-blue);
+    --text2: var(--white);
+  } @else if $theme == light {
+    --background: var(--white);
+    --top-bg-pattern: var(--very-pale-blue);
+    --card-bg: var(--light-grayish-blue);
+    --card-bg-hover: var(--light-grayish-blue2);
+    --text: var(--dark-grayish-blue);
+    --text2: var(--very-dark-blue);
+  }
+}
+$base-font-size: 14px;
+$small-font-size: 14px * 0.85;
+$desktop-width: 960px;
+$tablet-width: 600px;
+$mobile-width: $tablet-width - 1px;
+
+:root {
+  --very-dark-blue: hsl(230, 17%, 14%); //-bg
+  --very-dark-blue2: hsl(232, 19%, 15%); // top bg pattern
+  --dark-desaturated-blue: hsl(228, 28%, 20%); // card bg
+  --dark-desaturated-blue2: hsl(228, 26%, 24%); // card bg
+  --desaturated-blue: hsl(228, 34%, 66%); // text
+  --white: hsl(0, 0%, 100%); // text
+  --toggle: linear-gradient(90deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --toggle2: hsl(230, 22%, 74%);
+  --very-pale-blue: hsl(225, 100%, 98%); // top bg pattern
+  --light-grayish-blue: hsl(227, 47%, 96%); // card bg
+  --light-grayish-blue2: hsl(233, 33%, 90%); // card bg
+  --dark-grayish-blue: hsl(228, 12%, 44%); // text
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youtube: hsl(348, 97%, 39%);
+
+  --text-color: hsl(0, 0%, 7%);
+  --accent-color: hsl(216, 61%, 54%);
+  --grey300: hsl(0, 0%, 70%);
+  --grey500: hsl(0, 0%, 50%);
+
+  // Typography
+  --base-font-size: #{$base-font-size};
+  --small-font-size: #{$small-font-size};
+  --line-height: 1.6em;
+  --body-font-family: "Inter", sans-serif;
+  --headings-font-family: var(--body-font-family);
+  --h1-font-size: 2.7rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.5rem;
+  --h4-font-size: 1.3rem;
+  --h5-font-size: 1.1rem;
+  --h6-font-size: 1rem;
+  --border-radius-card: 4px;
+
+  // Dark theme
+  @include theme-props(dark);
+}
+
+.light-theme {
+  @include theme-props(light);
+}
+@media (prefers-color-scheme: light) {
+  .prefers-color-scheme {
+    @include theme-props(light);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .prefers-color-scheme {
+    @include theme-props(dark);
+  }
+}
